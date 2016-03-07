@@ -187,3 +187,22 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 TARGET_LDPRELOAD := libNimsWrap.so
 
 -include vendor/oneplus/onyx/BoardConfigVendor.mk
+
+TW_THEME := portrait_hdpi
+TW_INCLUDE_CRYPTO := true
+#TW_NO_USB_STORAGE := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_EXTRA_LANGUAGES := true
+DEVICE_RESOLUTION := 1080x1920
+
+#MultiROM config. MultiROM also uses parts of TWRP config
+TARGET_RECOVERY_IS_MULTIROM := true
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/oneplus/onyx/mr_init_devices.c
+MR_DPI := xhdpi
+MR_DPI_FONT := 340
+MR_FSTAB := device/oneplus/onyx/recovery.fstab
+MR_KEXEC_MEM_MIN := 0x20000000
+MR_DEVICE_HOOKS := device/oneplus/onyx/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 4
